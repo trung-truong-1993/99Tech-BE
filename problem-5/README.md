@@ -26,6 +26,7 @@ This project is a simple CRUD backend built using **Express.js**, **TypeScript**
 
 ## 📁 Project Structure
 
+```bash
 project-root/
 ├── src/
 │ ├── routes/
@@ -38,7 +39,7 @@ project-root/
 ├── package.json
 ├── tsconfig.json
 └── README.md
-
+```
 
 ---
 
@@ -49,44 +50,70 @@ project-root/
 ```bash
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
+```
 
-2. Install Dependencies
+### 2. Install Dependencies
+```bash
 npm install
+```
 
-3. Configure Environment Variables
+### 3. Configure Environment Variables
 
 Create a .env file based on the example:
 
+```bash
 cp .env.example .env
-
+```
 
 Edit the .env file and set your PostgreSQL credentials.
 
-🧱 Prisma Setup
-1. Initialize and Apply Migrations
+---
+
+## 🧱 Prisma Setup
+### 1. Initialize and Apply Migrations
+```bash
 npx prisma migrate dev --name init
+```
 
-2. Generate Prisma Client
+### 2. Generate Prisma Client
+```bash
 npx prisma generate
+```
 
-▶️ Running the App
+---
+
+## ▶️ Running the App
 Development Server
+```bash
 npm run dev
+```
 
 Production Build
+```bash
 npm run build
 npm start
+```
+---
 
-📬 API Endpoints
-Method	Endpoint	Description
+## 📬 API Endpoints
+| Method        | Endpoint         | Description             |
+| ------------- | ---------------- | ----------------------- |
+| POST          | /resources       | Create a new resource   |
+| GET           | /resources       | List all resources      |
+| GET           | /resources/:id   | Get resource by ID      |
+| PUT           | /resources/:id   | Update resource by ID   |
+| DELETE        | /resources/:id   | Delete resource by ID   |
+
 POST	/resources	Create a new resource
 GET	/resources	List all resources
 GET	/resources/:id	Get resource by ID
 PUT	/resources/:id	Update resource by ID
 DELETE	/resources/:id	Delete resource by ID
 📌 Example Payload
+```bash
 // POST /resources
 {
   "name": "Sample Resource",
   "description": "This is a sample resource"
 }
+```
