@@ -104,11 +104,6 @@ npm start
 | PUT           | /resources/:id   | Update resource by ID   |
 | DELETE        | /resources/:id   | Delete resource by ID   |
 
-POST	/resources	Create a new resource
-GET	/resources	List all resources
-GET	/resources/:id	Get resource by ID
-PUT	/resources/:id	Update resource by ID
-DELETE	/resources/:id	Delete resource by ID
 📌 Example Payload
 ```bash
 // POST /resources
