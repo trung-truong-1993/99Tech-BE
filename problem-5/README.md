@@ -112,3 +112,10 @@ npm start
   "description": "This is a sample resource"
 }
 ```
+
+```bash
+GET /resources?name=test
+GET /resources?description=test
+GET /resources?createdAfter=2023-01-01\&createdBefore=2023-12-31
+GET /resources?limit=10\&offset=20
+```
